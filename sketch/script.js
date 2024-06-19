@@ -10,10 +10,11 @@ function setup() {
 }
 
 function draw() {
-  drawShapes();
-  console.log()
-  if (shapes.length >= 10) {
-    noLoop();
+  if (!document.hidden) {
+    drawShapes();
+    if (shapes.length >= 10) {
+      noLoop();
+    }
   }
 }
 
@@ -38,7 +39,9 @@ function drawShapes() {
 }
 
 window.addEventListener("resize", () => {
-  canvas = createCanvas(windowWidth, windowHeight);
-  shapes = [];
-  loop();
+  if (p5) {
+    canvas = createCanvas(windowWidth, windowHeight);
+    shapes = [];
+    loop();
+  }
 });
