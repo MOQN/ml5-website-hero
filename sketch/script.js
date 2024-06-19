@@ -6,18 +6,17 @@ function setup() {
 }
 
 function draw() {
-  if (!canvas) {
+  if (!canvas && windowWidth > 0 && windowHeight > 0) {
     canvas = createCanvas(windowWidth, windowHeight);
     console.log(windowWidth, windowHeight);
     canvas.elt.style.zIndex = "-1";
   } else {
     blendMode(HARD_LIGHT);
-    //drawShapes();
+    drawShapes();
     if (shapes.length >= 10) {
-      //noLoop();
+      noLoop();
     }
   }
-
 }
 
 function drawShapes() {
