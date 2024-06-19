@@ -27,10 +27,12 @@ function drawShapes() {
   imageMode(CENTER);
   // tint(255, 180);
   let size = (width + height) / 2;
+  if (size == 0) return;
   if (width < 800) {
     let adj = map(width, 400, 800, 2.0, 1.0);
     size *= adj;
   }
+
   let shape = new ShapeImage(size * random(0.2, 1.0));
   shape.show();
   pop();
