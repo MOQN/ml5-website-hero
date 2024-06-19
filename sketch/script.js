@@ -1,16 +1,16 @@
 let shapes = [];
-//let colors = [];
 let canvas;
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);
-  canvas.elt.style.zIndex = "-1";
-
-  blendMode(HARD_LIGHT);
+  // 
 }
 
 function draw() {
-  if (!document.hidden) {
+  if (!canvas) {
+    canvas = createCanvas(windowWidth, windowHeight);
+    canvas.elt.style.zIndex = "-1";
+  } else {
+    blendMode(HARD_LIGHT);
     drawShapes();
     if (shapes.length >= 10) {
       noLoop();
@@ -27,7 +27,6 @@ function drawShapes() {
   imageMode(CENTER);
   // tint(255, 180);
   let size = (width + height) / 2;
-  if (size == 0) return;
   if (width < 800) {
     let adj = map(width, 400, 800, 2.0, 1.0);
     size *= adj;
