@@ -11,7 +11,7 @@ class ShapeImage {
 
     // this.points = this.generatePoints();
     this.graphics = this.generateGraphics(size, size);
-
+    console.log(this.graphics.width, this.graphics.height);
     return this;
   }
   get() {
