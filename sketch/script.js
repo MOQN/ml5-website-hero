@@ -1,4 +1,4 @@
-const IMAGE_SIZE = 150;
+const IMAGE_SIZE = 180;
 const MAX_ATTEMPTS = 100;
 let imgFolderPath = "images/color/"
 let imgPaths = [
@@ -84,9 +84,9 @@ function drawImage(img, x, y) {
   push();
   translate(x, y);
   imageMode(CENTER);
-  scale(random(0.6, 1.2));
+  scale(random(0.5, 1.2));
   rotate(random(-PI / 8, PI / 8));
-  tint(255, 150);
+  // tint(255, 150);
   image(img, 0, 0, IMAGE_SIZE, IMAGE_SIZE);
   pop();
 }
