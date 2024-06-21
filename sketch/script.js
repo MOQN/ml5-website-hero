@@ -1,4 +1,4 @@
-const IMAGE_SIZE = 180;
+const IMAGE_SIZE = 160;
 const MAX_ATTEMPTS = 100;
 let imgFolderPath = "images/color/"
 let imgPaths = [
