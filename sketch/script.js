@@ -39,6 +39,7 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.elt.style.zIndex = "-1";
 
+  images = shuffle(images);
   drawImages();
 
   noLoop();
